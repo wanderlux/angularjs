@@ -1,20 +1,75 @@
-<html>
+<html >
   <head>
-    <script src="angular.min.js"></script>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script-->
     <!-- Bootstrap core CSS -->
     <link href="mdb/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="mdb/css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="mdb/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="app.js"></script>
+    <link href="app.css" rel="stylesheet"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
     <title>AngularJS + MDBootstrap</title>
   </head>
-  <body>
-    <h1>Showcase of AngularJS + MDBootstrap</h1>
+  <body ng-app="githubApp" ng-controller="MainCtrl as Main">
 
+    <header>
+
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"></a>
+        <ul class="navbar-nav ml-auto nav-flex-icons text-purple">
+          <li class="nav-item mr-3">
+            <a class="{{color4}}-text teal-text" href="https://github.com/wanderlux" target="_blank"><i class="text-purple fab fa-github fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="{{color4}}-text" href="https://github.com/wanderlux" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <div class="container-fluid h-100" >
+
+      <div class="row h-100 align-items-center">
+        <div class="col-md-8 mx-auto text-center align-self-center">
+          <h1>Showcase of AngularJS + MDBootstrap</h1>
+          <span class="align-middle">
+            <button type="button" class="btn {{color1a}} {{gradient1}} {{rounded}}" ng-click="style()">Style</button>
+            <button type="button" class="btn {{color2}} {{gradient2}} {{rounded}}" ng-click="roundit()">Rounded</button>
+            <button type="button" class="btn {{color3}} {{gradient3}} {{rounded}}">Secondary</button>
+            <button type="button" class="btn {{color4}} {{gradient4}} {{rounded}}">Success</button>
+          </span>
+          <span class="align-middle zoomIn zoomOut" ng-if="colors">
+            <div class="btn-toolbar mt-3" role="toolbar">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-rounded red" ng-click="changeColor('red')"></button>
+              <button type="button" class="btn btn-rounded purple" ng-click="changeColor('purple')"></button>
+              <button type="button" class="btn btn-rounded indigo" ng-click="changeColor('indigo')"></button>
+              <button type="button" class="btn btn-rounded light-blue" ng-click="changeColor('light-blue')"></button>
+              <button type="button" class="btn btn-rounded teal" ng-click="changeColor('teal')"></button>
+              <button type="button" class="btn btn-rounded light-green" ng-click="changeColor('light-green')"></button>
+              <button type="button" class="btn btn-rounded yellow" ng-click="changeColor('yellow')"></button>
+              <button type="button" class="btn btn-rounded orange" ng-click="changeColor('orange')"></button>
+              <button type="button" class="btn btn-rounded brown" ng-click="changeColor('brown')"></button>
+            </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="mdb/js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
   </body>
 </html>
